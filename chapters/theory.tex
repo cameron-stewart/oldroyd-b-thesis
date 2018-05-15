@@ -1,0 +1,32 @@
+In this work we treat the solvent of a viscoelastic fluid as an incompressible fluid with the usual Navier-Stokes momentum and mass conservation equations. These are given by
+\begin{equation}\label{eq:momentum_conservation}
+\rho \left( \frac{\partial \bm{u}}{\partial t} + \left(\bm{u} \cdot \nabla\right)\bm{u}\right) =
+-\nabla p +\eta_s \nabla^2 \bm{u} + \bm{F}^{\mathrm{ext}} + \nabla \cdot \bm{\tau} 
+\end{equation}
+and
+\begin{equation}\label{eq:mass_conservation}
+\nabla \cdot \bm{u} = 0,
+\end{equation}
+where $\rho$ is the density, $\bm{u}$ is the velocity field, $p$ is the pressure, $\eta_s$ is the viscosity of the solvent, $\bm{F}^{\mathrm{ext}}$ is an external force density on the fluid, and $\bm{\tau}$ the so-called extra stress tensor. Here we see that the divergence of the extra stress tensor leads to a forcing term in the momentum conservation equation. 
+
+Although, on the microscopic level, viscoelastic effects are due to the stretching and relaxation of polymers suspended in the solvent, we will be using a continuum model to develop this extra stress tensor in time. The Oldroyd-B model is commonly used to describe viscoelastic flow and is mathematically equivalent to a fluid filled with harmonic spring "dumbells." The Oldroyd-B model provides a constitutive equation for the extra stress tensor which has the form
+\begin{equation}\label{eq:short_oldroyd_b}
+\overset{\nabla}{\bm{\tau}} = \frac{1}{\lambda_p}\left(2\eta_p\bm{d}- \bm{\tau}\right)
+\end{equation}
+where $\lambda_p$ and $\eta_p$ are the relaxation time and added viscosity of the polymer solution, respectively, and  
+\begin{equation}\label{eq:rate_of_strain}
+\bm{d} \defeq \frac{1}{2}\left(\nabla\bm{u} + \nabla \bm{u}^T\right)
+\end{equation}
+is the rate of strain tensor where $T$ indicates the transpose. The upper-convected time derivative is defined as
+\begin{equation}\label{eq:upper_convected_derivative}
+\overset{\nabla}{\bm{\tau}} \defeq \frac{\partial \bm{\tau}}{\partial t} + (\bm{u} \cdot \nabla)\bm{\tau} - \bm{\tau} \cdot \nabla\bm{u} -(\nabla\bm{u})^T \cdot \bm{\tau}
+\end{equation}
+and describes the time evolution of a tensor being transported along a velocity field $\bm{u}$. Use of this time derivative is required so that our constitutive relation Note that it is important that we choose the convention that
+\begin{equation}\label{eq:gradient_convention}
+(\nabla \bm{u})_{\alpha\beta} \defeq \frac{\partial u_{\beta}}{\partial x_\alpha}
+\end{equation}
+in order that Eq.~\eqref{eq:upper_convected_derivative} be the correct form. Finally, we may write the constitutive equation as
+\begin{equation}\label{eq:full_oldroyd_b}
+\frac{\partial \bm{\tau}}{\partial t} + (\bm{u} \cdot \nabla)\bm{\tau}= \left(\bm{\tau} \cdot \nabla\bm{u} +(\nabla\bm{u})^T \cdot \bm{\tau}\right) + \frac{1}{\lambda_p}\left(2\eta_p \bm{d} - \bm{\tau}\right).
+\end{equation}
+We aim to develop these two equations numerically in order to simulate an Oldroyd-B fluid.

@@ -1,0 +1,49 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\newcommand{\defeq}{\vcentcolon=}
+
+% Parentheses
+\newcommand{\lk}{\left\langle}
+\newcommand{\rk}{\right\rangle}
+\newcommand{\lb}{\left\lbrace}
+\newcommand{\rb}{\right\rbrace}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\ls}{\left[}
+\newcommand{\rs}{\right]}
+
+
+\graphicspath{{figures/}}
+
+
+\begin{document}
+\title{
+	{LB with Oldroyd-B Report}\\
+	{Institute for Computational Physics}\\
+	{\includegraphics[width=0.8\textwidth]{title.jpg}}
+}
+\author{Cameron Nash Stewart}
+\date{\today}
+\maketitle
+
+\chapter*{Dedication}
+This work is dedicated to Haribo for supplying me with enough sugar to study physics and for inspiring me to delve into the fascinating world of complex fluids.
+
+%\chapter{Introduction}
+\chapter{Mathematical Model}
+\input{chapters/theory}
+\chapter{Algorithm}
+\input{chapters/algorithm}
+\chapter{Benchmarks}
+\input{chapters/benchmarks}
+
+
+
+\end{document}
