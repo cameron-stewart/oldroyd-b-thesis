@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[11pt,twoside]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -6,6 +6,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
 
 \newcommand{\defeq}{\vcentcolon=}
 
@@ -22,6 +25,14 @@
 
 \graphicspath{{figures/}}
 
+\geometry{
+	a4paper,
+%	showframe,
+	twoside,
+	includeall,
+	top=15mm,left=30mm,right=10mm,bottom=15mm,
+	marginparwidth=20mm,marginparsep=5mm
+}
 
 \begin{document}
 \title{

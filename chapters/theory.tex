@@ -19,7 +19,7 @@ where $\lambda_p$ and $\eta_p$ are the relaxation time and added viscosity of th
 \end{equation}
 is the rate of strain tensor where $T$ indicates the transpose. The upper-convected time derivative is defined as
 \begin{equation}\label{eq:upper_convected_derivative}
-\overset{\nabla}{\bm{\tau}} \defeq \frac{\partial \bm{\tau}}{\partial t} + (\bm{u} \cdot \nabla)\bm{\tau} - \bm{\tau} \cdot \nabla\bm{u} -(\nabla\bm{u})^T \cdot \bm{\tau}
+\overset{\nabla}{\bm{\tau}} \defeq \frac{\partial \bm{\tau}}{\partial t} + (\bm{u} \cdot \nabla)\bm{\tau} - \bm{\tau} \cdot \nabla\bm{u} -(\nabla\bm{u})^\intercal \cdot \bm{\tau}
 \end{equation}
 and describes the time evolution of a tensor being transported along a velocity field $\bm{u}$. Use of this time derivative is required so that our constitutive relation Note that it is important that we choose the convention that
 \begin{equation}\label{eq:gradient_convention}
